@@ -1,79 +1,28 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
-   <title>Agrinho 2026</title>
-
+  <meta charset="UTF-8">
+  <title>Quiz do Agro 🌱</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <main>
-        <div class="passo ativo" id="passo-0">
-            <img src="cenario-passo0.jpg" alt="">
-            <p> A muito tempo atrás, os reinos dos humanos e dos demônios entraram em uma guerra interminável. Vandel, um príncipe demônio, sequestrou a princesa dos reinos dos humanos. Você, um cavalheiro honradoa cuidar do seu povo, foi mandado na missão de resgatar a princesa das mãos do Vandel. Agora, você caminhando dentro da floresta assombrada, que leva até o reino dos demônio, mas em uma das paradas, o caminho se divide em dois, e você tem que escolher qual caminho seguir. O da direita que te leva ao rio negro, o caminho mais seguro e mais longo a seguir. E o da esquerda que te leva a poça da escuridão, o mais perigoso e o mais rápido. Qual você quer seguir? </p>
-            <button class="btn-proximo" data-proximo="1"> seguir pela direita</button> 
-            <button class="btn-proximo" data-proximo="2"> seguir pela esquerda</button>
 
-        </div>
+  <div class="container">
+    <h1>Quiz do Agro 🌱</h1>
 
-        <div class="passo" id="passo-1">
-            <p>Você decide ir pelo caminho mais seguro. Enquanto você caminha pela beira do rio negro, uma sombra se mexe em meio as grandes arvores escuras, você quer vê o que é, ou deixar de lado?</p>
-            <button class="btn-proximo" data-proximo="3"> investigar</button>
-            <button class="btn-proximo" data-proximo="4"> deixar de lado e seguir em frente</button>
+    <p id="vida">❤️ Vidas: 3</p>
 
-        </div>
+    <p id="pergunta">Clique para começar</p>
 
-        <div class="passo" id="passo-2">
-            <p>Você decidei ir pelo caminho mais perigoso. Enquanto caminha cauteloso pelas sombras das árvores, você avista um grande poço. Você sente como se esse poço tivesse te chamando, como sussuros baixos. Você quer olhar ele, ou deixa-lo para trás?</p>
-            <button class="btn-proximo" data-proximo="5"> olhar o poço</button> 
-            <button class="btn-proximo" data-proximo="6"> ignorar o poço</button>
-        </div>
+    <div class="botoes">
+      <button onclick="responder('sim')">SIM</button>
+      <button onclick="responder('nao')">NÃO</button>
+    </div>
 
-        <div class="passo" id="passo-3">
-            <p>Você decide investigar a movimentação esquisita. Enquanto se aproxima lentamente, uma sombra pula de entre as árvores, era apenas um crovo pequeno e fofo. Ele bate asas e desaparece em meio das arvores. De longe, você consegue avistar uma sombra de um castelo, agora sabe que está bem próximo.</p>
-             <button class="btn-proximo" data-proximo="7"> seguir em frente</button>
-        </div>
+    <p id="resultado"></p>
+  </div>
 
-        <div class="passo" id="passo-4">
-            <p>Você decide ignorar o barulho estranho e segue em frente, passando por mas densidade e neblina. De longe, você consegue avistar uma sombra de um castelo, agora sabe que está bem próximo.</p>
-             <button class="btn-proximo" data-proximo="7"> seguir em frente</button>
-        </div>
-
-        <div class="passo" id="passo-5">
-            <p> Com calma, você chega perto desse poço, cada vez mais ele parece te engolir enquanto caminha até ele. Seus pés vão automaticamente em direção, agora não tem mais como voltar atrás. O poço te devora por dentro, sua alma e retirada bruscamente de você, sua conciencia se esvai e você desmaia, caindo diretamente dentro daquele terrível poço. Você morreu.</p>
-             <button class="btn-proximo" data-proximo="0"> reiniciar</button>
-        </div>
-
-        <div class="passo" id="passo-6">
-            <p> Você ignora o poço. Seguindo caminho calmamente pela floresta. Mais a frente, uma enorme sombra de um castelo se forma entre as arvores, agora, você sabe que está muito perto.</p>
-             <button class="btn-proximo" data-proximo="7"> seguir em frente</button>
-        </div>
-
-        <div class="passo" id="passo-7">
-            <p> Um castelo escuro e sombrio está a sua frente, enormes colunas se formam ao seu redor, quase como um convite para que entrasse. Uma voz oca surge atrás de você, mas quando se vira, não encontra nada, além do caminho que você veio. Seus olhos se voltam ao castelo, e você sabe o que tem que fazer.</p>
-             <button class="btn-proximo" data-proximo="8"> entrar no castelo dos demonios</button>
-             <button class="btn-proximo" data-proximo="9"> dar meia volta e voltar para o reino</button>
-        </div>
-
-        <div class="passo" id="passo-8">
-            <p> Um nobre cavalheiro nunca volta atrás. Encanto caminho para dentro do castelo, um estranho silencio o encomoda. Seus passos são calmnos mais rígidos de mais. Quando você entra no castelo, você encontra o Vandel sentado no trono, ele te pergunta quem é você e você se apresenta e ele pergunta o que você quer e você vai falar o que?</p>
-             <button class="btn-proximo" data-proximo="8"> "nada não" *dar meia volta e voltar para o reino*</button>
-             <button class="btn-proximo" data-proximo="9"> dar meia volta e voltar para o reino</button>
-        </div>
-
-
-
-
-
-    </main>
-    <script src="script.js"></script>
-    
+  <script src="script.js"></script>
 </body>
 </html>
-
